@@ -6,32 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Header</title>
     <link rel="stylesheet" href="./common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b94df4e2e.js" crossorigin="anonymous"></script>
+    <script src="./main.js" defer></script>
 </head>
 <body>
-    <header class="header">
+    <nav class="header">
         <div class="logo">
-            <div class="name">JJieunYun</div>
-            <div class="hambug">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <i class="fa-brands fa-pagelines"></i>
+            JJieunYun
         </div>
         <div class="menu">
             <ul class="ul_menu">
-                <li>Home</li>
-                <li>Gallary</li>
-                <li>Notice</li>
-                <li>FAQ</li>
-                <li>Community</li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Gallary</a></li>
+                <li><a href="">Notice</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">FAQ</a></li>
             </ul>
         </div>
         <div class="icon">
             <ul class="ul_icon">
-                <li style="padding-right:1em">🍟</li>
-                <li>😍</li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
             </ul>
+
         </div>
-    </header>
+        <a href="#" class="navar_toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
 </body>
 </html>

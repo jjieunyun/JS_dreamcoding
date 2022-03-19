@@ -1,29 +1,55 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: darkslategrey;
+    --accent-color : #d49466;
+}
+
 body {
     margin: 0;
+    font-family: 'source sans pro';
 }
 
 .header { 
-    background-color: #1a237e;
+    background-color: var(--background-color);
     display:flex;
     justify-content:space-between;
-    padding: 2rem 0 2rem 0;
+    align-items: center;
+    padding: 8px 12px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .logo {
     color: white;
-    font-size: 3em; 
-    padding-left: 2rem;
-    flex: 30%;
+    font-size: 24px; 
+    
 }
+
+.logo i {
+    color: #d49466;
+}
+
 
 .menu{
-    flex:50%;
+    
     color: white;
     padding-bottom: 0;
+    padding-left: 0;
 }
 
-.icon {
-    flex: 20%;
+.menu li {
+    padding: 8px 12px;
 }
+
+.menu li:hover {
+    background-color: #d49466;
+    border-radius: 4px;
+}
+
+
 
 .ul_menu {
     list-style: none;
@@ -32,54 +58,68 @@ body {
     
 }
 
-
+.icon li {
+    padding: 8px 12px;
+}
 
 .ul_icon {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem;
+    color: white;
+    padding: 0;
     
+}
+
+.navar_toggleBtn {
+    display: none;
+    position:absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
 }
 
 @media screen and (max-width : 900px){
     .header { 
     flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    }
     
-    height: 25rem;
-    }
-    .menu{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
     .ul_menu {
     flex-direction: column;
     padding-left: 0;
+    align-items: center;
+    display: none;
     }
-    .icon {
-        display: flex;
-        justify-content: center;
+
+    .menu {
+        width: 100%;
+    }
+
+    .ul_menu li {
+        width: 100%;
         text-align: center;
     }
-    .ul_icon {
-        padding: 0;
+
+    .icon {
+        justify-content: center;
+        width: 100%;
+        display: none;
     }
-    .hambug {
+
+    .icon ul{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navar_toggleBtn {
+        display: block;
+    }
+
+    .icon.active, 
+    .ul_menu.active {
         display: flex;
-        flex-direction: column;
     }
-    .hambug span {
-        height: 5px;
-        width: 30px;
-        display: inline-block;
-        background-color:darksalmon;
-        border-radius: 10px;
-        margin:2px;
-    }
-    .logo {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 2rem;
-    }
+
 }
