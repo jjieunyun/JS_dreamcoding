@@ -1,0 +1,247 @@
+:root {
+    /*color*/
+    --white-color : #fff;
+    --black-color : #140a00;
+    --blue-color : #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color : #e0e0e0;
+
+    /*size*/
+    --padding : 12px;
+    --avatar-size : 36px;
+
+
+    /*Font size*/
+    --font-large : 18px;
+    --font-medium : 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+/*전반적으로 미리 정해놓고 시작한다*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+}
+
+/*header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color:  var(--black-color);
+    color: var(--white-color);
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+
+header .logo i {
+    color: var(--red-color);
+}
+
+header .icons .fa-magnifying-glass {
+    margin-right: var(--padding);
+}
+
+/*video*/
+.player {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    background-color: var(--black-color);
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+ .info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+}
+
+.info .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    margin-right: var(--padding);
+}
+
+.info .metadata .titleAndButton .titl {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.info .metadata .titleAndButton .moreBtn {
+    height: 100%;
+}
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+/*action button*/
+
+.info .actions {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.info .actions button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.info .actions button i {
+    /*글자를 가운데 하고싶을때 : 위아래0 ,양옆은 오토로*/
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.info .actions button i.active {
+    color: var(--blue-color);
+}
+
+/*channel*/
+.channel {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--grey-light-color);
+    border-bottom: 1px solid var(--grey-light-color)
+}
+
+.channel .metadata {
+    display: flex;
+    align-items: center;
+}
+
+.channel .metadata .info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.channel .metadata img {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.channel .metadata .info .name {
+    font-size: var(--font-medium);
+}
+
+.channel .metadata .info .subscribers {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.channel .subscribe {
+    text-transform: uppercase;
+    color: var(--red-color);
+    font-size: var(--font-medium);
+
+}
+
+/*upnext*/
+.upNext {
+    margin-left: var(--padding);
+}
+
+.upNext > .title {
+    font-size: var(--font-medium);
+    color: var(--grey-dark-color);
+    margin-bottom: cal(var(--padding) / 2);
+    
+}
+
+.upNext .item {
+    display: flex;
+    margin-top: var(--padding);
+}
+
+.upNext .item .img {
+    flex: 1 1 35%;
+    
+}
+
+.upNext .item .img img {
+    width: 100%;
+}
+
+.upNext .item .info {
+    flex: 1 1 60%;
+}
+
+.upNext .item .moreBtn {
+    flex: 1 1 5%;
+}
+
+.upNext .item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.upNext .item .info .title {
+    font-size: var(--font-small);
+}
+
+.upNext .item .info .name,
+.upNext .item .info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+.infoAndUpnext {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width : 768px) {
+    .infoAndUpnext {
+        flex-direction: row;
+        margin:var(--padding) 0;
+    }
+}

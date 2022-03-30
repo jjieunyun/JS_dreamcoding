@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <!--fontAswome-->
+    <scr src="https://kit.fontawesome.com/0b94df4e2e.js" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <title>youtube Mobile</title>
+
+    <!--css file-->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <!--header완성-->
+    <header>
+        <div class="logo">
+            <i class="fa-brands fa-youtube"></i>
+            <span>Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </header>
+
+    <!--viddo player-->
+    <section class="player">
+        <video controls autoplay width="100%" src="./video/pexels-taryn-elliott-8820216.mp4"></video>
+    </section>
+
+    <div class="infoAndUpnext">
+    <!--video info-->
+    <div class="video_info">
+    <section class="info">
+        <!--metadata-->
+        <div class="metadata">
+                <ul class="hashtags">
+                    <li>#Ocean</li>
+                    <li>#Youtube실습</li>
+                    <li>#jieun</li>
+                </ul>
+        </div>
+        <div class="titleAndButton">
+                <span class="title"
+                >Clone coding : Youtube Mobile Website 유튜브 모바일 웹사이트를 따라 만들기
+                | 프론트엔드 개발자 입문편 : HTML, CSS, JavaScript 드림코딩과 함께하는
+                프론트엔드 실전 입문편
+                </span>
+                <button class="moreBtn" style="margin-left: 15px">
+                    <i class="fas fa-caret-down"></i>
+                </button>
+        </div>
+        <span class="views">1M views 1 month ago</span>
+
+        <!--acrions-->
+        <ul class="actions">
+            <li>
+                <button><i class="active fa-solid fa-thumbs-up"></i><span>1K</span></button>
+            </li>
+            <li>
+                <button><i class="fa-solid fa-thumbs-down"></i><span>0</span></button>
+            </li>
+            <li>
+                <button><i class="fa-solid fa-share"></i><span>Share</span></button>
+            </li>
+            <li>
+                <button><i class="fa-solid fa-plus"></i><span>Save</span></button>
+            </li>
+            <li>
+                <button><i class="fa-solid fa-flag"></i><span>Report</span></button>
+            </li>
+
+        </ul>
+
+        <!--채널정보-->
+        <div class="channel">
+            <div class="metadata">
+                <img src="./img/instagram_profile_image.png" alt="">
+                <div class="info">
+                    <span class="name">드림코딩By지은</span>
+                    <span class="subscribers">1M subscribers</span>
+                </div>
+            </div>
+            <button class="subscribe">Subscribe</button>
+        </div>
+        <!--up-->
+    </section>
+    </div>
+    
+    <!--upnext-->
+        <section class="upNext">
+            <span class="title">Up next</span>
+            <ul>
+                <li class="item">
+                    <div class="img"><img src="./img/1.webp" alt="" class="info"></div>
+                    <div class="info">
+                        <span class="title"
+                        >프론트엔드강의, 프론트엔드 개발자가 되고싶다면? 
+                        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) 
+                        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                            
+                        </span>
+                        <span class="name">드림코딩 By 엘리</span>
+                        <span class="views">82K Views</span>
+                    </div>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </li>
+    
+                <li class="item">
+                    <div class="img"><img src="./img/1.webp" alt="" class="info"></div>
+                    <div class="info">
+                        <span class="title"
+                        >프론트엔드강의, 프론트엔드 개발자가 되고싶다면? 
+                        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) 
+                        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                            
+                        </span>
+                        <span class="name">드림코딩 By 엘리</span>
+                        <span class="views">82K Views</span>
+                    </div>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </li>
+    
+                <li class="item">
+                    <div class="img"><img src="./img/1.webp" alt="" class="info"></div>
+                    <div class="info">
+                        <span class="title"
+                        >프론트엔드강의, 프론트엔드 개발자가 되고싶다면? 
+                        클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) 
+                        | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+                            
+                        </span>
+                        <span class="name">드림코딩 By 엘리</span>
+                        <span class="views">82K Views</span>
+                    </div>
+                    <button class="moreBtn">
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+</body>
+</html>
