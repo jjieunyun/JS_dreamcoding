@@ -12,6 +12,7 @@ function replace(array, from, to) {
   return replaced;
 }
 
+//재사용성을 높일 수 있도록 아래와 같이 만들면 된다.
 const array = ['🍌', '🍓', '🍇', '🍓'];
 const result = replace(array, '🍓', '🥝');
 console.log(result);

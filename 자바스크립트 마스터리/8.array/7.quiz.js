@@ -16,6 +16,7 @@ console.log(result);
 // input: [ '🍌', '🥝', '🍇', '🥝' ], '🥝'
 // output: 2
 function count(array, item) {
+  //filter : 내가 찾고자하는 조건을 만족하는 새로운 배열을 만든다
   return array.filter((value) => value === item).length;
   /*  return array.reduce((count, value) => {
     if (value === item) {
@@ -39,9 +40,11 @@ console.log(match(['🍌', '🥝', '🍇'], ['🍌', '🍓', '🍇', '🍓']));
 
 // 퀴즈 4
 // 5이상(보다 큰)의 숫자들의 평균
+
+//filter를 통해서 조건을 만든다(5보다 큰거) => redeuce를 통해 새로운 배열만들기
 const nums = [3, 16, 5, 25, 4, 34, 21];
 
 const result2 = nums
   .filter((num) => num > 5) //
-  .reduce((avg, num) => avg + num / array.length, 0);
+  .reduce((avg, num, _,array => avg + num / array.length, 0);
 console.log(result2);
