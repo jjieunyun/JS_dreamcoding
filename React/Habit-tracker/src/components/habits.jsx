@@ -8,6 +8,7 @@ import HabbitAddForm from './habitAddForm'
 //⭐⭐리액트에서는 state를 직접적으로 수정하는 것은 좋지않다.!!!⭐⭐
 
 class Habits extends Component {
+
     //이벤트함수
     handleInlreament = (habit)=> {
         this.props.onIncrement(habit);
@@ -26,6 +27,7 @@ class Habits extends Component {
     }
     
     render() {
+        console.log('habits');
         return <>
         <HabbitAddForm onAdd={this.handleAdd}/>
         <ul>
@@ -38,7 +40,8 @@ class Habits extends Component {
                         onDelete={this.handleDelete}
                     ></Habit>
             ))}
-        </ul>;
+        </ul>
+        <button className="habits-reset" onClick={this.props.onReset}>Reset All</button>
         </>
     }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 //🍎Habit컴포넌트 
 //🌳habits 컴포넌트의 데이터를 props로 전달받아서 화면에 출력하기만 하는 컴포넌트이다.
@@ -9,7 +9,7 @@ import React, { Component } from 'react';
     🌳리액트는 setState 함수를 사용하지 않으면 데이터 업데이트 유무를 알 수없기 때문이다!
     🌳부분적인 데이터를 업데이트 할 수없고 state전체를 업데이트 해주어야한다.-> 변경됐네? ->render함수호출*/
 //🌳삼항연산자를 이용해서 count가 0일때 (true) 0이 되는것을 제어할 수있다.
-class Habit extends Component {
+class Habit extends PureComponent {
     handleInlreament = ()=> {
         this.props.onIncrement(this.props.habit);
     }
@@ -23,7 +23,9 @@ class Habit extends Component {
     }
 
     render() {
+        console.log('habit')
         //⭐props를 통해서 외부데이터를 받아온다. 여러개일경우 {...} 안에 변수로 넣어서 사용한다.
+        //⭐this.props.habit로 데이터를 받아와서 직접 업데이트하면 같은 오브젝트라고 간주 -> 렌더링X
         const { name, count } = this.props.habit;
 
         return (
