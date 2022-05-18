@@ -10,6 +10,15 @@ import React, { PureComponent } from 'react';
     🌳부분적인 데이터를 업데이트 할 수없고 state전체를 업데이트 해주어야한다.-> 변경됐네? ->render함수호출*/
 //🌳삼항연산자를 이용해서 count가 0일때 (true) 0이 되는것을 제어할 수있다.
 class Habit extends PureComponent {
+    //🍎 componentDidMount: 컴포넌트가 ui상에 등록 되었을때 호출(ex.로딩스피너)
+    componentDidMount() {
+        console.log(`habit : ${this.props.habit.name} mounted`)
+    }
+    //🍎 componentWillUnmount: 지우기 전에 호출됨 ()
+    componentWillUnmount() {
+        console.log(`habit : ${this.props.habit.name} will unmount`)
+    }
+
     handleInlreament = ()=> {
         this.props.onIncrement(this.props.habit);
     }

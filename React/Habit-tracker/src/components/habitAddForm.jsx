@@ -1,33 +1,37 @@
-import React, { PureComponent } from 'react';
+import React, {memo} from 'react';
 
-//⭐PureComponent : data가 변경되지 않는다면 rerendering되지 않는다.
-class HabitAddForm extends PureComponent {
-    formRef= React.createRef();
-    inputRef = React.createRef();
-    onSubmit = event => {
+//⭐⭐memo : funtuin컴포넌트에서 사용하는 것 ; class의 pure component와 동일한 기능을 함
+//🌳state가 따로없다면 function형 컴포넌트를 사용할수있다.
+
+const HabitAddForm = memo(props => {
+    const formRef= React.createRef();
+    const inputRef = React.createRef();
+
+    const onSubmit = event => {
         event.preventDefault();
-        const name = this.inputRef.current.value;
-        name && this.props.onAdd(name);
+        const name = inputRef.current.value;
+        name && props.onAdd(name);
         //this.inputRef.current.value = '';
-        this.formRef.current.reset();
+        formRef.current.reset();
     };
 
-    render() {
-        console.log('habitAddForm')
-        return (
-            <>
-                <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
-                    <input 
-                        ref={this.inputRef}
-                        className="add-input" 
-                        type="text" 
-                        placeholder='add your Habbit'
-                    />
-                    <button className="add-button">Add</button>
-                </form>
-            </>
-        );
-    }
-}
+    console.log('habitAddForm')
+    return (
+        <>
+            <form ref={formRef} className="add-form" onSubmit={onSubmit}>
+                <input 
+                    ref={inputRef}
+                    className="add-input" 
+                    type="text" 
+                    placeholder='add your Habbit'
+                />
+                <button className="add-button">Add</button>
+            </form>
+        </>
+    );
+});
 
 export default HabitAddForm;
+
+
+

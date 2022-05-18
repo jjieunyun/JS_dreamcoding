@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+//⭐PureComponent : data가 변경되지 않는다면 rerendering되지 않는다.
 
 class Navbar extends PureComponent {
     render() {

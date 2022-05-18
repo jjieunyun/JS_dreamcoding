@@ -46,13 +46,13 @@ class App extends PureComponent {
       //console.log(`${habit.id}`)
       const paramId = habit.id;
       //🌳엘리쌤 답안
-      //const habits = this.state.habits.filter(item => item.id !== paramId)
-      //this.setState({habits})
-      const index = this.state.habits.findIndex(habit => habit.id === paramId);
-      this.state.habits.splice(index,1);
-      this.setState({
-          habits : this.state.habits
-      })
+      const habits = this.state.habits.filter(item => item.id !== paramId)
+      this.setState({habits})
+      //const index = this.state.habits.findIndex(habit => habit.id === paramId);
+      //this.state.habits.splice(index,1);
+      //this.setState({
+         // habits : this.state.habits
+      //})
   }
 
   handleAdd = (name)=> {
